@@ -35,7 +35,7 @@ package fr.paris.lutece.plugins.dansmarue.modules.rest.service;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import fr.paris.lutece.plugins.dansmarue.modules.rest.util.constants.SiraRestConstants;
 import fr.paris.lutece.portal.service.util.AppPropertiesService;

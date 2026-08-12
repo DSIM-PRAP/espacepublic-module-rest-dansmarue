@@ -35,7 +35,7 @@ package fr.paris.lutece.plugins.dansmarue.modules.rest.service.formatters;
 
 import java.util.List;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import fr.paris.lutece.plugins.dansmarue.business.entities.TypeSignalement;
 import fr.paris.lutece.plugins.dansmarue.modules.rest.util.constants.SignalementRestConstants;

@@ -37,7 +37,7 @@ import java.util.List;
 
 import fr.paris.lutece.plugins.dansmarue.business.entities.TypeSignalement;
 import org.apache.commons.collections.CollectionUtils;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import fr.paris.lutece.plugins.dansmarue.business.entities.Adresse;
 import fr.paris.lutece.plugins.dansmarue.business.entities.PhotoDMR;

@@ -58,7 +58,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.io.IOUtils;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import com.sun.jersey.core.header.FormDataContentDisposition;
 
@@ -2994,7 +2994,8 @@ public class SignalementRestService implements ISignalementRestService
     public JSONObject sauvegarderSignalement( Signalement demandeSignalement, String userName, String userMail )
     {
         SignalementOutputPrcessor signalementProcessor = new SignalementOutputPrcessor( );
-        return signalementProcessor.sauvegarderSignalementFromWS( demandeSignalement, userName, userMail );
+        // pont ObjectNode (plugin-bienvu migré Jackson) -> net.sf.json.JSONObject conservé côté rest
+        return JSONObject.fromObject( signalementProcessor.sauvegarderSignalementFromWS( demandeSignalement, userName, userMail ).toString( ) );
     }
 
     /**
@@ -3081,7 +3082,7 @@ public class SignalementRestService implements ISignalementRestService
      */
     public JSONObject getHistorySignalement( Integer idSignalement, HttpServletRequest request )
     {
-        return _signalementService.getHistorySignalement( idSignalement, request );
+        return JSONObject.fromObject( _signalementService.getHistorySignalement( idSignalement, request ).toString( ) );
     }
 
     /**

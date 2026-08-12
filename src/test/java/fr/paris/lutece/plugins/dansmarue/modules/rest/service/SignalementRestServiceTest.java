@@ -194,7 +194,7 @@ public class SignalementRestServiceTest
         jsonSrc.accumulate( JSON_TAG_INCIDENT, jsonIncident );
         jsonSrc.accumulate( JSON_TAG_POSITION, jsonPosition );
 
-        possibleSignalementOrigins = CollectionUtils.arrayToList( SIGNALEMENT_POSSIBLE_ORIGINS );
+        possibleSignalementOrigins = (List<String>) (List<?>) CollectionUtils.arrayToList( SIGNALEMENT_POSSIBLE_ORIGINS );
 
     }
 
